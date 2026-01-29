@@ -1,0 +1,49 @@
+{
+  "info": {
+    "name": "Admin Logout Test",
+    "description": "Test the admin logout endpoint with your refresh token",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Admin Logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2NjU3MDkyMywiaWF0IjoxNzY2NDg0NTIzLCJqdGkiOiJiMGRmZjIxOWEzNjQ0MjdhYjgzYzNjNDIwNmI2OWNkMiIsInVzZXJfaWQiOiIxIn0.th-GyHGqccLLe7fFd2vvBUFoHh-CKxTVLLFZayTUXuU\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/auth/admin/logout/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "auth",
+            "admin",
+            "logout",
+            ""
+          ]
+        },
+        "description": "Logout admin user by blacklisting the refresh token"
+      },
+      "response": []
+    }
+  ]
+}
+

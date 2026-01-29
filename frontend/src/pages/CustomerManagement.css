@@ -1,0 +1,66 @@
+.customer-management {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.customers-table-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.customers-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customers-table thead {
+  background: #f8fafc;
+}
+
+.customers-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.customers-table td {
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.customers-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.status-blocked {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.btn-success {
+  color: #10b981;
+}
+
+.btn-success:hover {
+  background: #d1fae5;
+  border-color: #10b981;
+  color: #10b981;
+}
+
+@media (max-width: 768px) {
+  .customers-table-container {
+    overflow-x: auto;
+  }
+  
+  .customers-table {
+    min-width: 1000px;
+  }
+}
+

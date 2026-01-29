@@ -1,0 +1,164 @@
+.promotions {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.promotions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.promo-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.promo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.promo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.promo-code-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.promo-icon {
+  font-size: 2rem;
+  color: #3b82f6;
+}
+
+.promo-code-section h3 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+  font-weight: 700;
+}
+
+.promo-id {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.status-expired {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.promo-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-value.discount {
+  color: #10b981;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.usage-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.usage-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.promo-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-danger {
+  color: #ef4444;
+}
+
+.btn-danger:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  margin: 0 0 1.5rem 0;
+  color: #1e293b;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .promotions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

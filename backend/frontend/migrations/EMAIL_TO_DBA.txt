@@ -1,0 +1,32 @@
+Subject: Database Migration Request - frontend_user.role_id Column Type Change
+
+Hi Database Administrator,
+
+I need to change the data type of the `role_id` column in the `frontend_user` table from INTEGER to VARCHAR(50).
+
+Database Details:
+- Host: 15.207.8.95
+- Port: 6432
+- Database: rudraride_db
+- Table: frontend_user
+- Column: role_id
+
+SQL Command to Run:
+===========================================
+ALTER TABLE frontend_user 
+ALTER COLUMN role_id TYPE VARCHAR(50) USING 
+    CASE 
+        WHEN role_id IS NULL THEN NULL
+        ELSE role_id::text
+    END;
+===========================================
+
+This will:
+- Convert existing integer values (1, 2, etc.) to strings ("1", "2", etc.)
+- Allow storing string role IDs like "R001", "R002", etc.
+- Preserve NULL values
+
+After running, please confirm so I can mark the Django migration as applied.
+
+Thank you!
+

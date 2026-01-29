@@ -1,0 +1,159 @@
+/* Theme CSS Variables */
+
+/* Light Theme Colors */
+.theme-light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --bg-tertiary: #e8ecf1;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-tertiary: #94a3b8;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --overlay: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Theme Colors */
+.theme-dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --border-color: #334155;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --overlay: rgba(0, 0, 0, 0.7);
+}
+
+/* Color Schemes */
+.color-default {
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-light: #dbeafe;
+  --accent-color: #8b5cf6;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #06b6d4;
+}
+
+.color-blue {
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-light: #dbeafe;
+  --accent-color: #60a5fa;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #06b6d4;
+}
+
+.color-green {
+  --primary-color: #10b981;
+  --primary-hover: #059669;
+  --primary-light: #d1fae5;
+  --accent-color: #34d399;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #06b6d4;
+}
+
+.color-purple {
+  --primary-color: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --primary-light: #ede9fe;
+  --accent-color: #a78bfa;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #06b6d4;
+}
+
+.color-orange {
+  --primary-color: #f97316;
+  --primary-hover: #ea580c;
+  --primary-light: #ffedd5;
+  --accent-color: #fb923c;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #06b6d4;
+}
+
+/* Layout Styles */
+.layout-full-width {
+  --container-max-width: 100%;
+  --container-padding: 0;
+}
+
+.layout-boxed {
+  --container-max-width: 1400px;
+  --container-padding: 2rem;
+}
+
+/* Font Sizes */
+.font-small {
+  --font-size-base: 0.875rem;
+  --font-size-sm: 0.75rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.125rem;
+  --font-size-2xl: 1.25rem;
+  --font-size-3xl: 1.5rem;
+}
+
+.font-medium {
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+}
+
+.font-large {
+  --font-size-base: 1.125rem;
+  --font-size-sm: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem;
+  --font-size-3xl: 2.25rem;
+}
+
+/* Animations */
+.animations-enabled * {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, 
+              transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.animations-disabled * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* RTL Support */
+.direction-rtl {
+  direction: rtl;
+}
+
+.direction-ltr {
+  direction: ltr;
+}
+
+/* Apply theme variables to body */
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: var(--font-size-base, 1rem);
+}
+
+
+
+
+
+

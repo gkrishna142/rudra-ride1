@@ -1,0 +1,6 @@
+/* App.css - Global styles for admin dashboard */
+.App {
+  min-height: 100vh;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}

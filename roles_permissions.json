@@ -1,0 +1,434 @@
+{
+  "roles": [
+    {
+      "id": "R001",
+      "name": "Super Admin",
+      "description": "Full access to all features and settings",
+      "userCount": 2,
+      "defaultPage": "/",
+      "permissions": {
+        "/": {
+          "view": true,
+          "edit": true
+        },
+        "/users": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true
+        },
+        "/rides": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "assign": true
+        },
+        "/drivers": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true
+        },
+        "/customers": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "block": true
+        },
+        "/payments": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "refund": true
+        },
+        "/vehicles": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true
+        },
+        "/complaints": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "reply": true,
+          "resolve": true
+        },
+        "/promotions": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true
+        },
+        "/notifications": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "send": true
+        },
+        "/settings": {
+          "view": true,
+          "edit": true
+        },
+        "/roles": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true
+        },
+        "/zones": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true
+        }
+      }
+    },
+    {
+      "id": "R002",
+      "name": "Admin",
+      "description": "Access to most features except system settings",
+      "userCount": 5,
+      "defaultPage": "/",
+      "permissions": {
+        "/": {
+          "view": true,
+          "edit": false
+        },
+        "/users": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false
+        },
+        "/rides": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false,
+          "assign": true
+        },
+        "/drivers": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false,
+          "approve": true
+        },
+        "/customers": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false,
+          "block": true
+        },
+        "/payments": {
+          "view": true,
+          "create": false,
+          "edit": true,
+          "delete": false,
+          "refund": false
+        },
+        "/vehicles": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false
+        },
+        "/complaints": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false,
+          "reply": true,
+          "resolve": true
+        },
+        "/promotions": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false
+        },
+        "/notifications": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false,
+          "send": true
+        },
+        "/settings": {
+          "view": false,
+          "edit": false
+        },
+        "/roles": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false
+        },
+        "/zones": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false
+        }
+      }
+    },
+    {
+      "id": "R003",
+      "name": "Moderator",
+      "description": "Can manage rides, drivers, and handle complaints",
+      "userCount": 8,
+      "defaultPage": "/rides",
+      "permissions": {
+        "/": {
+          "view": true,
+          "edit": false
+        },
+        "/users": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false
+        },
+        "/rides": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false,
+          "assign": true
+        },
+        "/drivers": {
+          "view": true,
+          "create": false,
+          "edit": true,
+          "delete": false,
+          "approve": false
+        },
+        "/customers": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "block": true
+        },
+        "/payments": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "refund": false
+        },
+        "/vehicles": {
+          "view": true,
+          "create": false,
+          "edit": true,
+          "delete": false
+        },
+        "/complaints": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "reply": true,
+          "resolve": true
+        },
+        "/promotions": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false
+        },
+        "/notifications": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "send": false
+        },
+        "/settings": {
+          "view": false,
+          "edit": false
+        },
+        "/roles": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false
+        },
+        "/zones": {
+          "view": true,
+          "create": false,
+          "edit": true,
+          "delete": false
+        }
+      }
+    },
+    {
+      "id": "R004",
+      "name": "Support",
+      "description": "Can view and respond to complaints only",
+      "userCount": 12,
+      "defaultPage": "/complaints",
+      "permissions": {
+        "/": {
+          "view": true,
+          "edit": false
+        },
+        "/users": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false
+        },
+        "/rides": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "assign": false
+        },
+        "/drivers": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false
+        },
+        "/customers": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "block": false
+        },
+        "/payments": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "refund": false
+        },
+        "/vehicles": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false
+        },
+        "/complaints": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "reply": true,
+          "resolve": false
+        },
+        "/promotions": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false
+        },
+        "/notifications": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "send": false
+        },
+        "/settings": {
+          "view": false,
+          "edit": false
+        },
+        "/roles": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false
+        },
+        "/zones": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false
+        }
+      }
+    }
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "label": "Dashboard"
+    },
+    {
+      "path": "/users",
+      "label": "User Management"
+    },
+    {
+      "path": "/roles",
+      "label": "Roles & Permissions"
+    },
+    {
+      "path": "/rides",
+      "label": "Ride Management"
+    },
+    {
+      "path": "/drivers",
+      "label": "Driver Management"
+    },
+    {
+      "path": "/customers",
+      "label": "Customer Management"
+    },
+    {
+      "path": "/zones",
+      "label": "Zone Management"
+    },
+    {
+      "path": "/payments",
+      "label": "Payments & Transactions"
+    },
+    {
+      "path": "/vehicles",
+      "label": "Vehicles Management"
+    },
+    {
+      "path": "/complaints",
+      "label": "Complaints & Support"
+    },
+    {
+      "path": "/promotions",
+      "label": "Promotions & Coupons"
+    },
+    {
+      "path": "/notifications",
+      "label": "Notifications"
+    },
+    {
+      "path": "/settings",
+      "label": "Admin Settings"
+    }
+  ],
+  "standardPermissions": [
+    "view",
+    "create",
+    "edit",
+    "delete"
+  ],
+  "pageSpecificPermissions": {
+    "/": ["edit"],
+    "/rides": ["assign"],
+    "/drivers": ["approve"],
+    "/customers": ["block"],
+    "/payments": ["refund"],
+    "/complaints": ["reply", "resolve"],
+    "/notifications": ["send"],
+    "/settings": ["edit"]
+  }
+}

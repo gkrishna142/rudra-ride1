@@ -1,0 +1,108 @@
+.vehicles {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.vehicle-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.vehicle-header h3 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.vehicle-model {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.vehicle-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-value.expired {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.detail-value.expiring-soon {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.alert-icon {
+  margin-left: 0.25rem;
+}
+
+.vehicle-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.service-type-badge,
+.vehicle-type-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.service-type-cab,
+.vehicle-type-cab {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.service-type-bike,
+.vehicle-type-bike {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.service-type-auto,
+.vehicle-type-auto {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.service-type-driver {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+@media (max-width: 768px) {
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

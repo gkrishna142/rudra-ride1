@@ -37,16 +37,13 @@ urlpatterns = [
     
     # Role Permission CRUD endpoints
     path('auth/role-permissions/', role_permissions_list, name='role-permissions-list'),  # GET (list all), POST (create)
-<<<<<<< Updated upstream
+
     # Support both ID-based (for backward compatibility) and composite key formats
     path('auth/role-permissions/<int:id>/', role_permission_detail_by_id, name='role-permission-detail-by-id'),  # GET, POST, PUT, PATCH, DELETE (uses id - backward compatible)
     # List/delete all permissions for a role (must come before composite key pattern)
     path('auth/role-permissions/<str:role_id>/', role_permissions_by_role, name='role-permissions-by-role'),  # GET (list all for role), PUT/PATCH (bulk update), DELETE (delete all for role)
     path('auth/role-permissions/<str:role_id>/<path:page_path>/<str:permission_type>/', role_permission_detail, name='role-permission-detail'),  # GET, POST, PUT, PATCH, DELETE (uses composite key)
-=======
-    path('role-permissions/', role_permissions_list, name='role-permissions-list-short'),  # Alias: POST /api/role-permissions/
-    path('auth/role-permissions/<int:id>/', role_permission_detail, name='role-permission-detail'),  # GET, PUT, PATCH, DELETE
->>>>>>> Stashed changes
+
     
     # User Role CRUD endpoints
     path('auth/user-roles/', user_roles_list, name='user-roles-list'),  # GET (list all), POST (create)
